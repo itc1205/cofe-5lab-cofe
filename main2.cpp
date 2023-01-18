@@ -15,7 +15,7 @@ double getDiskFreeSpacePercentage()
 		&lpNumberOfFreeClusters,
 		&lpTotalNumberOfClusters))
 	{
-		return double(lpNumberOfFreeClusters) * double(lpSectorsPerCluster) * double(lpBytesPerSector);
+		return double(lpTotalNumberOfClusters) * double(lpSectorsPerCluster) * double(lpBytesPerSector);
 	}
 	else
 	{
